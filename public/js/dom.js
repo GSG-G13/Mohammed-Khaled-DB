@@ -12,7 +12,7 @@ const createDom = (response) => {
     const createProductName = createElement('h2', 'product-name')
     createProductName.textContent = element.name
     const createProductCategory = createElement('span', 'product-category')
-    createProductCategory.textContent = element.category_id.value
+    createProductCategory.textContent = element.name
     const createProductPrice = createElement('p', 'product-price')
     createProductPrice.textContent = element.price
     const createProductDescription = createElement('p', 'product-description')
