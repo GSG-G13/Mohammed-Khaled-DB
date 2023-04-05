@@ -1,4 +1,4 @@
-const dbConnection = require('../config/connection')
+const { connection } = require('../config/connection')
 
 const postProduct = productData => {
   // eslint-disable-next-line camelcase
@@ -8,7 +8,7 @@ const postProduct = productData => {
     // eslint-disable-next-line camelcase
     values: [name, price, description, image, category_id]
   }
-  return dbConnection.query(sql)
+  return connection.query(sql)
 }
 
 module.exports = {
