@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS products, categories CASCADE;
 
 CREATE TABLE categories (
   id SERIAL PRIMARY KEY,
-  name VARCHAR(50) NOT NULL
+  category VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE products (
@@ -16,7 +16,7 @@ CREATE TABLE products (
   category_id INTEGER REFERENCES categories(id) ON UPDATE CASCADE
 );
 
-INSERT INTO categories (name) VALUES ('Laptops'),('Accessories');
+INSERT INTO categories (category) VALUES ('Laptops'),('Accessories');
 
 INSERT INTO products
 (
