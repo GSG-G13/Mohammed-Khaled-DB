@@ -13,6 +13,6 @@ exports.getProducts = (req, res) => {
 exports.addProduct = (req, res) => {
   const productInfo = req.body
   postProduct(productInfo)
-    .then((data) => res.redirect('/'))
+    .then((data) => res.redirect('/products'))
     .catch(err => console.log('err:', err))
 }

@@ -4,6 +4,7 @@ const createElement = (element, className) => {
   ele.className = className
   return ele
 }
+// eslint-disable-next-line no-unused-vars
 const createDom = (response) => {
   response.forEach((element) => {
     const createProductDiv = createElement('div', 'product')
@@ -12,13 +13,12 @@ const createDom = (response) => {
     const createProductName = createElement('h2', 'product-name')
     createProductName.textContent = element.name
     const createProductCategory = createElement('span', 'product-category')
-    createProductCategory.textContent = element.name
+    createProductCategory.textContent = element.category
     const createProductPrice = createElement('p', 'product-price')
-    createProductPrice.textContent = element.price
+    createProductPrice.textContent = `$${element.price}`
     const createProductDescription = createElement('p', 'product-description')
     createProductDescription.textContent = element.description
     createProductDiv.append(createProductImg, createProductName, createProductCategory, createProductPrice, createProductDescription)
     container.append(createProductDiv)
   })
 }
-module.exports = { createDom }
